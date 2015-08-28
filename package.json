@@ -1,0 +1,34 @@
+{
+  "name": "hcin720",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "browser": {
+      "jquery": "./bower_components/jquery/dist/jquery.js",
+      "paper": "./bower_components/paper/dist/paper-full.js"
+  },
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
+    "lodash.assign": "^3.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyjmnz/hcin720.git"
+  },
+  "author": "Anthony Jimenez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonyjmnz/hcin720/issues"
+  },
+  "homepage": "https://github.com/tonyjmnz/hcin720#readme"
+}
