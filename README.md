@@ -1,13 +1,13 @@
-# Usage
+# Data Source
 
-* Run the following commands in the project root:
+[World Weather Online's maritime data source](http://www.worldweatheronline.com/api/docs/marine-weather-api.aspx)
 
-  `npm install`
+# Libraries Used
 
-  `bower install`
+[paper.js](http://paperjs.org/)
 
-* Run a web server in the `dist` folder, e.g.:
+[jQuery](https://jquery.com/)
 
-  `python -m SimpleHTTPServer 8000`
+# Link to prototype
 
-* Navigate to `http://localhost:8000` on your browser
+[SurfGraph](https://rawgit.com/tonyjmnz/hcin720/master/dist/index.html)
