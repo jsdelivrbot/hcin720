@@ -8,6 +8,9 @@
 
 [jQuery](https://jquery.com/)
 
-# Link to prototype
+# Link to prototypes
+SurfGraph:
 
-[SurfGraph](https://rawgit.com/tonyjmnz/hcin720/master/dist/index.html)
+[Location Select](https://rawgit.com/tonyjmnz/hcin720/ee2dc5e1071616ad7b99984beb947b0a79f413fa/dist/index.html)
+
+[Auto-update](https://rawgit.com/tonyjmnz/hcin720/e9f76bc85db0fb586e94773d1e043f63ee75948a/dist/index.html)
