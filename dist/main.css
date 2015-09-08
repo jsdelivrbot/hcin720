@@ -36,6 +36,12 @@ div {
     top: 0;
 }
 
+.timeframe {
+    font-size: 0.75em;
+    width: 100%;
+    text-align: center;
+}
+
 #chart-container {
     background-color: #96B4E4;
     position: relative;

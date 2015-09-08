@@ -74,6 +74,16 @@ var size = view.size;
 
 // });
 
+setInterval(function(){
+  var location = $('#surf-location');
+
+  var currentOptionId = location.find('option:selected').index();
+  var nextOption = location.find('option').eq((currentOptionId + 1) % 5);
+
+  location.val(nextOption.val());
+  location.trigger('change');
+
+}, 15000);
 
 var makeAPIRequest = function(callback) {
   $.ajax({
