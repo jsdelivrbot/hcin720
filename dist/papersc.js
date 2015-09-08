@@ -82,6 +82,7 @@ setInterval(function(){
 
   location.val(nextOption.val());
   location.trigger('change');
+  $('#location-title').html(nextOption.html());
 
 }, 15000);
 
