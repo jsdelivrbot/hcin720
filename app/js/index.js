@@ -1,63 +1,93 @@
 var $ = require('jquery');
-var paper = require('paper');
+//var paper = require('paper');
+//paper.install(window);
+window.$ = $;
+//var filtered = JSON.parse('[{"temp":"54","waterTemp":"60","weatherDesc":"Partly Cloudy","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png","swHeight":"1.7"},{"temp":"54","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.7"},{"temp":"68","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.6"},{"temp":"86","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.6"},{"temp":"89","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.6"},{"temp":"86","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.6"},{"temp":"63","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.5"},{"temp":"61","waterTemp":"60","weatherDesc":"Sunny","weatherIcon":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png","swHeight":"1.5"}]');
 
-var canvas = document.getElementById('test');
-// Create an empty project and a view for the canvas:
-paper.setup(canvas);
-// paper.install(window);
+function s() {
 
-// // Adapted from the following Processing example:
-// // http://processing.org/learning/topics/follow3.html
+var filtered = [
+  {
+    temp: "54",
+    waterTemp: "60",
+    weatherDesc: "Partly Cloudy",
+    weatherIcon: "http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png",
+    swHeight:"1.7"
+  },
+  {
+    temp:"54",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.7"
+  },
+  {
+    temp:"68",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.6"
+  },
+  {
+    temp:"86",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.6"
+  },
+  {
+    temp:"89",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.6"
+  },
+  {
+    temp:"86",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.6"
+  },
+  {
+    temp:"63",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.5"
+  },
+  {
+    temp:"61",
+    waterTemp:"60",
+    weatherDesc:"Sunny",
+    weatherIcon:"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
+    swHeight:"1.5"
+  }];
+console.log(filtered);
 
-// // The amount of points in the path:
-// var points = 20;
 
-// // The distance between the points:
-// var length = 20;
-
-// var path = new Path({
-//     strokeColor: '#E4141B',
-//     strokeWidth: 20,
-//     strokeCap: 'round'
-// });
-
-// //var start = view.center / [10, 1];
-// var start = view.center.divide(new Point([10, 1]));
-
-// for (var i = 0; i < points; i++) {
-//     path.add(start.add(new Point(i * length, 0)));
-// }
-
-
-// function onMouseMove(event) {
-//     path.firstSegment.point = event.point;
-//     for (var i = 0; i < points - 1; i++) {
-//         var segment = path.segments[i];
-//         var nextSegment = segment.next;
-//         var vector = segment.point.subtract(nextSegment.point);
-//         vector.length = length;
-//         nextSegment.point = segment.point.subtract(vector);
-//     }
-//     path.smooth();
-// };
-
-// function onMouseDown(event) {
-//     path.fullySelected = true;
-//     path.strokeColor = '#e08285';
-// };
-
-// function onMouseUp(event) {
-//     path.fullySelected = false;
-//     path.strokeColor = '#e4141b';
-// };
-
-var path = new paper.Path.Rectangle([125, 125], [200, 200]);
-path.strokeColor = 'black';
-
-paper.view.onFrame = function(event) {
-    // On each frame, rotate the path by 3 degrees:
-    path.rotate(1);
-};
+var freduced = filtered.reduce(
+  function(reduced, obj) {
+    reduced.swHeights.push(parseFloat(obj.swHeight));
+    reduced.temps.push(obj.temp);
+    reduced.waterTemps.push(obj.waterTemp);
+    reduced.weatherDescs.push(obj.weatherDesc);
+    reduced.weatherIcons.push(obj.weatherIcon);
+    return reduced;
+}, {
+  swHeights:[],
+  temps:[],
+  waterTemps:[],
+  weatherDescs:[],
+  weatherIcons:[]
+});
+ console.log(freduced);
 
 
+ChartData = window.ChartData || {};
 
+// Stick on the modules that need to be exported.
+// You only need to require the top-level modules, browserify
+// will walk the dependency graph and load everything correctly
+ChartData = freduced;
+}

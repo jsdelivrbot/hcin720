@@ -1,7 +1,185 @@
-<html>
-    <head></head>
-    <body>
-        <canvas id="test" height="500px" width="500px"></canvas>
-        <script type="text/javascript" src="bundle.js"></script>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HCIN720</title>
+  <meta name="author" content="Anthony Jimenez">
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+  <div >
+    <select id="surf-location">
+      <option value='36.961419, -122.015068'>Santa Cruz, CA</option>
+      <option value='21.595299, -158.111836'>Haleiwa, HI</option>
+      <option value='33.036938, -117.308063'>Encinitas, CA</option>
+      <option value='20.923168, -156.378652'>Paia, HI</option>
+      <option value='33.413771, -117.638179'>San Clemente, CA</option>
+    </select>
+  </div>
+  <div id="chart-container" class="container">
+    <canvas id="chart" height="500" width="1000"></canvas>
+    <div id="slice-container" class="container">
+      <div id="slice1" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice2" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice3" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice4" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice5" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice6" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice7" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+      <div id="slice8" class="slice">
+        <img class="weather-pic">
+        <div class="slice-info">
+          <div class="weather-desc"></div>
+          <div>
+            <div class='small-text'>temperature</div>
+            <div class="temp"></div>
+          </div>
+          <div>
+            <div class='small-text'>water temp</div>
+            <div class="water-temp"></div>
+          </div>
+        </div>
+        <div class="swell">
+          <div class="swell-title">wave swell height</div>
+          <div class="swell-value"></div>
+        </div>
+      </div>
+    </div>
+    <div id="overlay-container" class="container">
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+      <div class="overlay-slice"></div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../bower_components/paper/dist/paper-full.js"></script>
+  <script type="text/javascript" src="bundle.js"></script>
+  <script type="text/paperscript" src="papersc.js" canvas="chart"></script>
+</body>
 </html>
