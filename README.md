@@ -1,16 +1,6 @@
-# Data Source
+This is a repository that contains all the project related to the Fall 2015 class of
+HCIN 720: Designing UX for Internet-Enabled Devices
 
-[World Weather Online's maritime data source](http://www.worldweatheronline.com/api/docs/marine-weather-api.aspx)
+*[ia1 / surf-graph](https://github.com/tonyjmnz/hcin720/tree/master/ia1): visualization of a graph that shows relevant informations for surfers, the data comes from a public weather API.
 
-# Libraries Used
-
-[paper.js](http://paperjs.org/)
-
-[jQuery](https://jquery.com/)
-
-# Link to prototypes
-SurfGraph:
-
-[Location Select](https://rawgit.com/tonyjmnz/hcin720/ee2dc5e1071616ad7b99984beb947b0a79f413fa/dist/index.html)
-
-[Auto-update](https://rawgit.com/tonyjmnz/hcin720/e9f76bc85db0fb586e94773d1e043f63ee75948a/dist/index.html)
+*[ia2 / auto-light](https://github.com/tonyjmnz/hcin720/tree/master/ia2): automatic lighting system build using the [Photon](https://store.particle.io/?product=particle-photon) and some sensors
