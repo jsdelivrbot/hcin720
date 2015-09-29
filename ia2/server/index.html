@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script>
+			var socket = io();
+			//When we get the 'data" message...
+			socket.on('to browser', function(data)
+			{
+				//Add the message to the #messages list
+				$('#messages').append($('<li>').text(data));
+			});
+
+			//Also send some data back once per second
+			/*window.setInterval(
+				function()
+				{
+					var msg = "Hello: " + Math.random();
+					console.log(msg);
+					socket.emit('to serial', msg);
+				},
+				1000
+			);*/
+
+	//this code follows recommendations in
+	//https://community.particle.io/t/tutorial-getting-started-with-spark-publish/3422
+	 function start() {
+
+	        var deviceID = "3b003b001747343337363432";
+	        var accessToken = "6163d05c2f208fcd29c06141e7fe66e800a33626";
+	        var eventSource = new EventSource("https://api.spark.io/v1/devices/" + deviceID + "/events/?access_token=" + accessToken);
+
+	        eventSource.addEventListener('open', function(e) {
+	            console.log("Connected to Spark API."); },false);
+
+	        eventSource.addEventListener('error', function(e) {
+	            console.log("Failed to connect to Spark API."); },false);
+
+	        eventSource.addEventListener('deviceStatus', function(e) {
+	            var parsedData = JSON.parse(e.data);
+	            console.log(JSON.parse(parsedData.data));
+	        }, false);
+	    }
+		</script>
+	</head>
+	<body onload="start();">
+		<ul id="messages"></ul>
+	</body>
+</html>

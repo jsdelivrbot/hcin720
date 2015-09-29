@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AutoLight</title>
+  <link rel="stylesheet" href="https://rawgit.com/simurai/umbrUI/gh-pages/elements/radio.css">
+  <link rel="stylesheet" href="umbrui-progress.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+      <div id="light-bulb" class="" >
+        <!-- light bulb styles from http://jsfiddle.net/lesson8/4rkQZ/1/ -->
+        <div id="light-bulb2" style="opacity: 0; "></div>
+      </div>
+    </div>
+    <div class="column">
+      <div id="sun-img">
+        <div id="sun-light"></div>
+      </div>
+    </div>
+    <div class="progressbar">
+      <progress id="proximity" value="0.1"></progress>
+    </div>
+    <div class="switch-container">
+      <div class="switches">
+        <!-- switch styles from umbrUI: https://github.com/simurai/umbrUI -->
+        <input type="radio" id="radio-on" name="light-switch" data-index="1" data-icon="on">
+        <input type="radio" id="radio-auto" name="light-switch" data-index="2" data-icon="auto" checked="checked">
+        <input type="radio" id="radio-off" name="light-switch" data-index="0" data-icon="off">
+      </div>
+      <div class="switches">
+        <!-- switch styles from umbrUI: https://github.com/simurai/umbrUI -->
+        <input type="radio" id="radio-on" name="data-switch" data-index="1" data-icon="☁" data-source="cloud">
+        <input type="radio" id="radio-auto" name="data-switch" data-index="2" data-icon="serial" data-source="serial" checked="checked">
+      </div>
+    </div>
+  </div>
+  <!-- progressbar styles from umbrUI: https://github.com/simurai/umbrUI -->
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

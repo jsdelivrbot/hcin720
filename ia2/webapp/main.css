@@ -1,0 +1,82 @@
+body {
+  background: rgb(70, 72, 75);
+}
+
+#proximity {
+    width: 420px;
+    height: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    width:800px;
+    margin:0 auto;
+}
+
+.progressbar {
+    padding: 25px 0;
+}
+
+.switch-container {
+    padding-top: 50px;
+    width: 420px;
+    margin: 0 auto;
+}
+
+.column {
+    width:48%;
+    height:300px;
+    display:inline-block;
+}
+
+.switches {
+    display:inline-block;
+}
+
+.switches:nth-child(2){
+    margin-left:30px;
+}
+
+#light-bulb2 {
+    width: 150px;
+    height: 150px;
+    background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat 0 0;
+}
+
+#light-bulb {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    float:right;
+
+    width: 150px;
+    height: 150px;
+    background: url(https://lh4.googleusercontent.com/-katLGTSCm2Q/UJC0_N7XCrI/AAAAAAAABq0/6GxNfNW-Ra4/s300/lightbulb.png) no-repeat -150px 0;
+    cursor: move;
+    z-index: 800;
+}
+
+#sun-light {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    opacity: 0.5;
+    box-shadow: 0 0 90px yellow;
+
+
+    margin-left: 75px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+#sun-img {
+    height: 300px;
+    width: 300px;
+    background-size: 150px 150px;
+    background: url(sun_outline.png);
+    background-size: cover;
+}
+
