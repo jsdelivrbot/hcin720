@@ -16,6 +16,9 @@ All these components are attached to the [Photon](https://store.particle.io/?pro
 ![auto-light fritzing diagram](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia2/fritzing/autolight.png)
 Diagram created using [Fritzing](http://fritzing.org/home/)
 
+![auto-light picture](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia2/fritzing/autolight.jpg)
+Circuit image, less pretty but more functional
+
 ## Circuit description
 
 * Pin A0 receives photoresistor input
