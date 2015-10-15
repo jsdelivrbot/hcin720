@@ -1,4 +1,4 @@
-# auto-light case
+# auto-light-case
 
 This was designed using [BoxMaker](http://boxmaker.connectionlab.org/), this was a starting point for the final version of the case, which features some added functionality in order to expose interaction elements and sensors. This is a basic image of the parts:
 
