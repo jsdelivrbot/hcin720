@@ -15,7 +15,7 @@ This was designed using [BoxMaker](http://boxmaker.connectionlab.org/), this was
 * An alternative to the laser-cut button can be 3d printed using [buttonMM.gcode](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/buttonMM.gcode)
 * The button acts as an extension to the button in the circuit board.
 
-# Case and part images
+# Case images
 ![Front image of the box with wooden button](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/front-wooden.jpg)
 ![Top image of the box](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/top.jpg)
 ![Front image of the box with plastic button](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/front-plastic.jpg)
