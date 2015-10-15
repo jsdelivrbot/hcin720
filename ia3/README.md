@@ -16,6 +16,6 @@ This was designed using [BoxMaker](http://boxmaker.connectionlab.org/), this was
 * The button acts as an extension to the button in the circuit board.
 
 # Case and part images
-![Box Parts](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/front-wooden.png)
-![Box Parts](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/top.png)
-![Box Parts](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/front-plastic.png)
+![Front image of the box with wooden button](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/front-wooden.jpg)
+![Top image of the box](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/top.jpg)
+![Front image of the box with plastic button](https://raw.githubusercontent.com/tonyjmnz/hcin720/master/ia3/img/front-plastic.jpg)
